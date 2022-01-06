@@ -1,4 +1,4 @@
-package com.example.arty3
+package com.example.arty3.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentArts">
+
+    <fragment
+        android:id="@+id/fragmentArts"
+        android:name="com.example.arty3.fragment.FragmentArts"
+        android:label="FragmentArts" >
+        <action
+            android:id="@+id/action_fragmentArts_to_fragmentDetails"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.example.arty3.fragment.FragmentDetails"
+        android:label="FragmentDetails" >
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentImageApi"
+            app:destination="@id/fragmentImageApi" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentImageApi"
+        android:name="com.example.arty3.fragment.FragmentImageApi"
+        android:label="FragmentImageApi" />
+</navigation>
