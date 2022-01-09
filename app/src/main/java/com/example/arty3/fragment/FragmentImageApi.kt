@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.example.arty3.R
 import com.example.arty3.databinding.FragmentImageApiBinding
+import javax.inject.Inject
 
-class FragmentImageApi : Fragment() {
+class FragmentImageApi: Fragment() {
 
     private lateinit var binding: FragmentImageApiBinding
 
