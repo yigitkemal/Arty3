@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/artistName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Artist Name"
@@ -36,21 +36,22 @@
         app:layout_constraintTop_toBottomOf="@+id/artName" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/artBuildYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="art build year"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/artistName"
+        app:layout_constraintTop_toBottomOf="@+id/artistName" />
 
     <TextView
+        android:id="@+id/descriptionOfArt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description of Art."
         android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/artBuildYear"
+        app:layout_constraintTop_toBottomOf="@+id/artBuildYear" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

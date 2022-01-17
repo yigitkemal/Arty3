@@ -2,8 +2,13 @@ package com.example.arty3.dependencyinjection
 
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.arty3.R
 import com.example.arty3.api.RetrofitAPI
+import com.example.arty3.repo.ArtRepository
 import com.example.arty3.roomdatabase.ArtDb
+import com.example.arty3.roomdatabase.artDao
 import com.example.arty3.util.Util.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -37,5 +42,17 @@ object AppModule  {
             .build()
             .create(RetrofitAPI::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun injectNormalRepo(dao: artDao, api: RetrofitAPI)= ArtRepository(dao,api) as ArtRepository
+
+    @Singleton
+    @Provides
+    fun injectGlide(@ApplicationContext context: Context)= Glide.with(context)
+        .setDefaultRequestOptions(
+            RequestOptions().placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_launcher_foreground)
+        )
 
 }
